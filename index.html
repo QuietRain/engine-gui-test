@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+</head>
+
+<body>
+    <script src="dessert/dessert.js"></script>
+    <canvas width="2500" height="1000" id="app"></canvas>
+
+    <iframe id="preview" src="http://localhost:1337/index.html" height="1000" width="2500"></iframe>
+
+    <script>
+        document.write(process.versions.electron)
+        let gui = require('./lib/render/gui.js')
+        gui.run();
+    </script>
+</body>
+
+</html>
