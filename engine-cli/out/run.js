@@ -1,11 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var StaticServer = require("static-server");
+var portnumber = 1338;
 function run(projectPath) {
+    portnumber = portnumber + 1;
+    console.log(projectPath);
     var server = new StaticServer({
         rootPath: projectPath,
         name: 'my-http-server',
-        port: 1337,
+        port: portnumber,
         cors: '*',
         followSymlink: true,
         templates: {
